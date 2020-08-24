@@ -27,20 +27,28 @@
 <body>
   <h2>Fast 50 by Ryan Kan: input selections.</h2>
 
-  <pIn>Please input a number between <pIn class="s0">1</pIn> and <pIn class="s0">5</pIn> for number of digits:</pIn><br>
-  <input id="dg">
-  <button type="button" onclick="setParam.call(sheet,'dg')">Submit</button>
-  <p id="msg-dg"></p>
+  <div class="row">
+    <div class="column">
+  		<pIn>Please input a number between <pIn class="s0">1</pIn> and <pIn class="s0">5</pIn> for number of digits:</pIn><br>
+  		<input id="dg">
+  		<button type="button" onclick="setParam.call(sheet,'dg')">Submit</button>
+  		<p id="msg-dg"></p>
+    </div>
 
-  <pIn>Please input either <pIn class="s0">1</pIn> or <pIn class="s0">2</pIn> minutes for time limit:</pIn><br>
-  <input id="tl">
-  <button type="button" onclick="setParam.call(sheet,'tl')">Submit</button>
-  <p id="msg-tl"></p>
+    <div class="column">
+  		<pIn>Please input either <pIn class="s0">1</pIn> or <pIn class="s0">2</pIn> minutes for time limit:</pIn><br>
+  		<input id="tl">
+  		<button type="button" onclick="setParam.call(sheet,'tl')">Submit</button>
+  		<p id="msg-tl"></p>
+    </div>
 
-  <pIn>Please input one of four operators <pIn class="s0"><b>+ - * / </b></pIn> for operation:</pIn><br>
-  <input id="op">
-  <button type="button" onclick="setParam.call(sheet,'op')">Submit</button>
-  <p id="msg-op"></p>
+    <div class="column">
+  		<pIn>Please input one of four operators <pIn class="s0"><b>+ - * / </b></pIn> for operation:</pIn><br>
+  		<input id="op">
+  		<button type="button" onclick="setParam.call(sheet,'op')">Submit</button>
+  		<p id="msg-op"></p>
+    </div>
+  </div>
 
   <script>
     var sheet = {
