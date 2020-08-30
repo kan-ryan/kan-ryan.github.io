@@ -13,144 +13,16 @@
   <script type="text/javascript" src="js/generate.js"></script>
   <script src="js/welcome.js"></script>
   <!-- write your title between <title></title> tag -->
-  <title>Fast 50 by Ryan Kan</title>
+  <title>Fast Math Worksheet by Ryan Kan</title>
 </head>
 
 <body>
-  <h2>SDRT fast 50: input selections.</h2>
-  <!--  -->
-  <!-- three columns to get users' input by nested <div class="row"><div class="column"></div>...</div> tag -->
-  <!-- the 1st column has been filled out for you as a reference, finish the other two -->
-  <div class="row">
-    <div class="column">
-      <!-- message to show on the browser; message can be styled too -->
-      <pIn>Please input a number between <pIn class="s0">1</pIn> and <pIn class="s0">5</pIn> for number of digits:</pIn><br>
-      <!-- create an input box with an id -->
-      <input id="dg">
-      <!-- specify a function to run associated with input box specified by an id -->
-      <button type="button" onclick="setParam.call(sheet,'dg')">Submit</button>
-      <!-- a placeholder by an id with which the invoked function can display any message onto browser -->
-      <p id="msg-dg"></p>
-    </div>
-
-    <div class="column">
-      <!-- fill in similar 4 tags -->
-      <pIn>Please input either <pIn class="s0">1</pIn> or <pIn class="s0">2</pIn> for the time limit:</pIn><br>
-      <!-- create an input box with an id -->
-      <input id="tl">
-      <!-- specify a function to run associated with input box specified by an id -->
-      <button type="button" onclick="setParam.call(sheet,'tl')">Submit</button>
-      <!-- a placeholder by an id with which the invoked function can display any message onto browser -->
-      <p id="msg-tl"></p>
-
-    </div>
-
-    <div class="column">
-      <!-- fill in similar 4 tags -->
-      <pIn>Please enter one of the four operators <pIn class="s0">+</pIn><pIn class="s0">-</pIn><pIn class="s0">*</pIn><pIn class="s0">/</pIn>  for the time limit:</pIn><br>
-      <!-- create an input box with an id -->
-      <input id="op">
-      <!-- specify a function to run associated with input box specified by an id -->
-      <button type="button" onclick="setParam.call(sheet,'op')">Submit</button>
-      <!-- a placeholder by an id with which the invoked function can display any message onto browser -->
-      <p id="msg-op"></p>
-
-    </div>
-  </div>
-
-  <script>
-    <!-- this script tag only contains an object which is just data for us to generate and grade a worksheet -->
-    var sheet = {
-      cases: 50, 
-      digits: 1,
-      timeLimit: 1,
-      operator: "+",
-      in_a: [],
-      in_b: [],
-      ans: []
-    };
-  </script>
-  
-  <!-- specify a function to run when button is clicked -->
-  <button type="button" onclick="generate.call(sheet)">Click here to generate a new worksheet</button><br><br>
-  <!-- a placeholder to display a score onto browser after grading -->
-  <p1 id="score"></p1>
-  <!-- use <form></form> as a placeholder for users to input their answers -->
-  <!-- within <form></form>, <div class="row"><div class="column"></div>...</div> tags are used to save space -->
-  <form id="frm1">  
-  <div class="row">
-    <div class="column">
-      <prb id="prob0"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob1"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob2"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob3"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob4"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob5"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob6"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob7"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob8"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob9"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob10"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob11"></prb><input type="text" id="ans" name="ans"/><br>
-    </div>
-    <div class="column">
-      <!-- fill in similar tags -->
-      <prb id="prob12"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob13"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob14"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob15"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob16"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob17"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob18"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob19"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob20"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob21"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob22"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob23"></prb><input type="text" id="ans" name="ans"/><br>
-
-    </div>
-    <div class="column">
-      <!-- fill in similar tags -->
-      <prb id="prob24"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob25"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob26"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob27"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob28"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob29"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob30"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob31"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob32"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob33"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob34"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob35"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob36"></prb><input type="text" id="ans" name="ans"/><br>
-
-    </div>
-    <div class="column">
-      <!-- fill in similar tags -->
-     
-      <prb id="prob37"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob38"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob39"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob40"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob41"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob42"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob43"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob44"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob45"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob46"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob47"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob48"></prb><input type="text" id="ans" name="ans"/><br>
-      <prb id="prob49"></prb><input type="text" id="ans" name="ans"/><br>
-
-
-    </div>
-  </div>
-  </form>  
-  <!-- when final button is clicked, trigger grading function to run -->
-  <!-- fill in the correct function call -->
-  <button onclick="grade.call(sheet)">Submit Your Answers</button>
-
-</body>
+  <h1>Fast Math Worksheet created by Ryan Kan.</h1>
+  <h2>Please make your selection of <p style="color:green; font-size:25px; display: inline;">50</p> or <p style="color:green; font-size:25px; display: inline;">20</p> questions by clicking on the buttons below.</h2>
+  <h2>Choose <button onclick="document.location='fast50.html'">Fast 50</button> or <button onclick="document.location='fast20.html'">Fast 20</button>.
+  </h2>
+    
+    
+  </body>
 
 </html>
