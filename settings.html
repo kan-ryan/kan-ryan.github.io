@@ -1,0 +1,129 @@
+<!-- this a comment -->
+<!-- all the comments go in between the one shown on next line -->
+<!--  -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- link to your CSS and Javascript files in <head> tag area -->
+  <link rel="stylesheet" type="text/css" href="css/styleA.css">
+  <script type="text/javascript" src="js/generate.js"></script>
+  <script type="text/javascript">
+    // <!-- this script tag only contains an object which is just data for us to generate and grade a worksheet -->
+    var sheet = {
+      cases: 50, 
+      digits: 1,
+      timeLimit: 1,
+      operator: "+",
+      in_a: [],
+      in_b: [],
+      ans: []
+    };
+    window.localStorage.setItem("sheet", JSON.stringify(sheet));
+  </script>
+  <!-- <script src="js/welcome.js"></script> -->
+  <!-- write your title between <title></title> tag -->
+  <title>Fast Math Worksheet by Ryan Kan</title>
+
+  <style>
+    * {
+      background-color: #2a3538;
+      color: #55b0c9;
+    }
+    input {
+      left: 50%;
+    }
+  
+    div.myDiv {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        font-size: 50px;
+        text-align: center;
+        height: 10%;
+        width: 25%;
+        float: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2%;
+    }
+    div.ice {
+        background-color: #55b0c9;
+    }
+    div.title {
+      width:75%;
+      font-size: 50pt;
+    }
+    div.author {
+      font-size: 20pt;
+    }
+    div.button {
+      font-size: 35pt;
+      color: #2a3538;
+    }
+
+    div.banner {
+      text-align: center;
+      background-color: black; 
+      font-size: 50px;
+      padding-top: 1%;
+      padding-bottom: 1%;
+    }
+    p {
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="banner">Fast Math Worksheet</div>
+
+  <!-- <h2>SDRT fast 50: input selections.</h2> -->
+  <!--  -->
+  <!-- three columns to get users' input by nested <div class="row"><div class="column"></div>...</div> tag -->
+  <!-- the 1st column has been filled out for you as a reference, finish the other two -->
+
+  <!-- <div class="column"> -->
+      <!-- message to show on the browser; message can be styled too -->
+      <div class="myDiv"> 
+        <p>Please input a number between <pIn class="s0">1</pIn> and <pIn class="s0">5</pIn> for number of digits:</pIn><br>
+        <!-- create an input box with an id -->
+        <input id="dg">
+        <!-- specify a function to run associated with input box specified by an id -->
+        <button type="button" onclick="setParam.call(sheet,'dg')">Submit</button>
+        <!-- a placeholder by an id with which the invoked function can display any message onto browser -->
+        <p id="msg-dg"></p>
+      </div>
+
+      <div class="myDiv">
+        <!-- fill in similar 4 tags -->
+        <p>Please input either <pIn class="s0">1</pIn> or <pIn class="s0">2</pIn> for the time limit:</pIn><br>
+        <!-- create an input box with an id -->
+        <input id="tl">
+        <!-- specify a function to run associated with input box specified by an id -->
+        <button type="button" onclick="setParam.call(sheet,'tl')">Submit</button>
+        <!-- a placeholder by an id with which the invoked function can display any message onto browser -->
+        <p id="msg-tl"></p>
+      </div>
+
+
+      <div class="myDiv">
+        <!-- fill in similar 4 tags -->
+        <p>Please enter one of the four operators <pIn class="s0">+</pIn><pIn class="s0">-</pIn><pIn class="s0">*</pIn><pIn class="s0">/</pIn>  for the time limit:</pIn><br>
+        <!-- create an input box with an id -->
+        <input id="op">
+        <!-- specify a function to run associated with input box specified by an id -->
+        <button type="button" onclick="setParam.call(sheet,'op')">Submit</button>
+        <!-- a placeholder by an id with which the invoked function can display any message onto browser -->
+        <p id="msg-op"></p>
+
+      </div>
+
+
+  <div class="myDiv button ice" onclick="document.location='countdown.html'">Start!</div>
+  </body>
+
+</html>

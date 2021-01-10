@@ -1,0 +1,97 @@
+<!-- this a comment -->
+<!-- all the comments go in between the one shown on next line -->
+<!--  -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" type="text/css" href="css/styleA.css">
+  <title>Fast Math Worksheet by Ryan Kan</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"> </script>
+
+  <style>
+    * {
+      background-color: #2a3538;
+    }
+    div {
+      top: 50%;
+      margin: auto;
+      font: bold;
+      text-align: center
+    }
+    .three {
+      color: red;
+    }
+    .two {
+      color: yellow;
+    }
+    .one {
+      color: green;
+    }
+
+    /*Banner*/
+    div.banner {
+      background-color: black; 
+      font-size: 50px;
+      color: #55b0c9;
+      padding-top: 1%;
+      padding-bottom: 1%;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="banner">Fast Math Worksheet</div>
+
+  <div id="three" class="three"> 3 </div>
+  <div id="two" class="two"> 2 </div>
+  <div id="one" class="one"> 1 </div>
+  
+  <script type="text/javascript">
+    var finalFontSize = 200
+    var t = anime.timeline({
+      duration: 1000,
+      easing: function(el, i, total) {
+        return function(t) {
+          return Math.sqrt(Math.sqrt(t));
+        }
+      }
+    });
+
+    t.add({
+      targets: '.three',
+      translateY: "50%",
+      opacity: [0, 1],
+      fontSize: [0, finalFontSize],
+      complete: function() {
+        document.getElementById("three").innerHTML = ""
+      }
+    })
+    .add({
+      targets: '.two',
+      translateY: "50%",
+      opacity: [0, 1],
+      fontSize: [0, finalFontSize],
+      complete: function() {
+        document.getElementById("two").innerHTML = ""
+      }
+    })
+    .add({
+      targets: '.one',
+      translateY: "50%",
+      opacity: [0, 1],
+      fontSize: [0, finalFontSize],
+      complete: function() {
+        document.location='fast50v2.html'
+      }
+    })
+    
+  </script>
+</body>
+
+</html>

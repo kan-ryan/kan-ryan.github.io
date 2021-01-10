@@ -11,16 +11,61 @@
   <!-- link to your CSS and Javascript files in <head> tag area -->
   <link rel="stylesheet" type="text/css" href="css/styleA.css">
   <script type="text/javascript" src="js/generate.js"></script>
-  <script src="js/welcome.js"></script>
+  <!-- <script src="js/welcome.js"></script> -->
   <!-- write your title between <title></title> tag -->
   <title>Fast Math Worksheet by Ryan Kan</title>
+
+  <style> 
+    * {
+        padding: 0;
+        margin: 0;
+        /*text-align: center;*/
+        background-color: black; 
+        /*background-color: #1e2021;*/
+    }
+    div {
+        font-size: 50px;
+        text-align: center;
+        height: 10%;
+        width: 25%;
+        float: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2%;
+        color: #55b0c9;
+    }
+    div.ice {
+        background-color: #55b0c9;
+    }
+    div.title {
+      width:75%;
+      font-size: 50pt;
+    }
+    div.author {
+      font-size: 20pt;
+    }
+    div.button {
+      font-size: 35pt;
+      color: #2a3538;
+    }
+    img.banner {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Fast Math Worksheet created by Ryan Kan.</h1>
-  <h2>Please make your selection of <p style="color:green; font-size:25px; display: inline;">50</p> or <p style="color:green; font-size:25px; display: inline;">20</p> questions by clicking on the buttons below.</h2>
+  <img class="banner" src="images/sdrt-logo.png"/>
+  <div class="title">Fast Math Worksheet </div>
+  <div class="author">Created by Ryan Kan</div>
+  <div class="button ice" onclick="document.location='settings.html'">Next</div>
+
+  <!-- <h2>Please make your selection of <p style="color:green; font-size:25px; display: inline;">50</p> or <p style="color:green; font-size:25px; display: inline;">20</p> questions by clicking on the buttons below.</h2>
   <h2>Choose <button onclick="document.location='fast50.html'">Fast 50</button> or <button onclick="document.location='fast20.html'">Fast 20</button>.
-  </h2>
+  </h2> -->
     
     
   </body>

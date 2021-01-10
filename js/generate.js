@@ -44,6 +44,7 @@
       document.getElementById("msg-op").innerHTML = text;
 
     }
+    window.localStorage.setItem("sheet", JSON.stringify(this));
   }
 
   //this function is to generate a fast50 worksheet
@@ -126,19 +127,21 @@
     console.log(prbCollection);
     for (let i = 0; i < prbCollection.length; i++){
       prbCollection[i].innerHTML = this.in_a[i] + " " + this.operator + " " + this.in_b[i] + " = ";
+      prbCollection[i].style.color = "#55b0c9";
     }
 
     //clear the score
     console.log(document.getElementById("score"));
-    document.getElementById("score").innerHTML = "";
+    document.getElementById("score").innerHTML = "Score: ?? / 50";
+    document.getElementById("score").style.color = "#55b0c9";
 
     //clear previous user's answers; note this code snippet is functionally wrong
     //we need to fix it but it actually did clear the previous user's answers
     let inputCollection = document.getElementsByTagName("input"); //there are 53 "input"
     console.log(inputCollection);
     for (let i = 0; i < inputCollection.length; i++) {
-      inputCollection[i+3].style.background = "#f0f0f0";
-      inputCollection[i+3].value = "";
+      inputCollection[i].style.background = "#f0f0f0";
+      inputCollection[i].value = "";
     }
   }
 
@@ -171,8 +174,9 @@
       if(studentAns[i] == this.ans[i]){
         score++;
       }else{
-        inputCollection[i+3].value = studentAns[i]+ "-->" + this.ans[i];
-        inputCollection[i+3].style.background = "#ff8080";
+        inputCollection[i].value = studentAns[i]+ "-->" + this.ans[i];
+        inputCollection[i].style.color = "white";
+        inputCollection[i].style.background = "#ff8080";
       }
       
     }
@@ -184,7 +188,7 @@
       document.getElementById("score").innerHTML = "Good Job! Your score: "+score+"/"+this.cases;
     }
     else {
-      document.getElementById("score").innerHTML = "Keep working! Your score: "+score+"/"+this.cases;
+      document.getElementById("score").innerHTML = "Practice Some More! Your score: "+score+"/"+this.cases;
     }
   }
 
