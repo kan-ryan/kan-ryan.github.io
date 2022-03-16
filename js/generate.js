@@ -126,7 +126,7 @@
     let prbCollection = document.getElementsByTagName("prb");
     console.log(prbCollection);
     for (let i = 0; i < prbCollection.length; i++){
-      prbCollection[i].innerHTML = this.in_a[i] + " " + this.operator + " " + this.in_b[i] + " = ";
+      prbCollection[i].innerHTML = this.in_a[i] + " " + this.operator + " " + this.in_b[i] + " == ";
       prbCollection[i].style.color = "#55b0c9";
     }
 
